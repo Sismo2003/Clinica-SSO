@@ -1,0 +1,1 @@
+([('SSO', '/Users/alexisortiz/Developer/Github/alan/dist/SSO', 'EXECUTABLE')],)
