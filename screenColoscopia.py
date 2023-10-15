@@ -10,7 +10,8 @@ config_file = os.path.join(os.path.dirname(__file__), 'config.json')
 forest_dark_file = os.path.join(os.path.dirname(__file__), 'forest-dark.tcl')
 forest_light_file = os.path.join(os.path.dirname(__file__), 'forest-light.tcl')
 db_file = os.path.join(os.path.dirname(__file__), 'DB.json')
-image_path = os.path.join(os.path.dirname(__file__), 'images', 'imagen1.png')
+image_path = os.path.join(os.path.dirname(__file__), 'documents/imagen1.png')
+
 
 
 def formColoscopia():
@@ -67,12 +68,9 @@ def formColoscopia():
                 ColposcopiaQuestionEntrystr,hallazgosColposcopicosEntrystr,comtPlanTerapeuticoEntrystr,doctor1NameEntrystr,cedProfEntrystr,
                 diagnosticoColposcopico,images
             )
-            if(question):
-                preg = tkr.messagebox.askquestion(title="Volver a menu principal",message="Reporte Completado con exito, Deseas volver al menu?")
-                if(preg == "yes"):  
+            if(question): 
                     window.destroy()
-                else:
-                    print("me quedo en este menu")
+
             
 
     

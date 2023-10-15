@@ -1,0 +1,8 @@
+{
+    "DatabasePath": "documents/DB.json",
+    "ThemePathLigth": "documents/forest-light.tcl",
+    "ThemePathDark": "documents/forest-dark.tcl",
+    "DocxTemplatePath": "documents/templateColoscopia.docx",
+    "DocxSaveDocument": "documents/pacientes",
+    "LogoPath": "documents/images/logoApp.ico"
+}

@@ -80,4 +80,3 @@ def configs():
     DocxTemplatePathLabel.grid(row=2,column=1,padx=20,pady=20)
     root.iconphoto(False,tkr.PhotoImage(file=image_path))
     root.mainloop()
-

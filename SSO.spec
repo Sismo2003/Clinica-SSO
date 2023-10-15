@@ -5,16 +5,13 @@ a = Analysis(
     ['menu.py'],
     pathex=[],
     binaries=[],
-
-   datas=[
-    ('config.json', '.'),
-    ('forest-dark.tcl', '.'),
-    ('forest-light.tcl', '.'),
-    ('DB.json', '.'),
-    ('images/imagen1.png', 'images')
-],
-
-
+    datas=[   
+    ('documents/forest-light/*','documents/forest-light/'),
+    ('documents/forest-dark/*','documents/forest-dark/'),
+    ('documents/*','documents/'),
+    ('documents/images/*','documents/images'),
+    ('documents/templateColoscopia.docx','documents')
+    ],
     hiddenimports=['babel.numbers'],
     hookspath=[],
     hooksconfig={},
@@ -30,6 +27,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
+    onefile = False,
     name='SSO',
     debug=False,
     bootloader_ignore_signals=False,
@@ -37,17 +35,17 @@ exe = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,
+    console=True,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['images/LogoAppMac.icns'],
+    icon=['documents/images/LogoAppMac.icns'],
 )
 app = BUNDLE(
     exe,
     name='SSO.app',
-    icon='images/LogoAppMac.icns',
+    icon='documents/images/LogoAppMac.icns',
     bundle_identifier=None,
 )

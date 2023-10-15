@@ -7,15 +7,15 @@ from openConfig import loadpath
 import os
 
 
-config_file = os.path.join(os.path.dirname(__file__), 'config.json')
-forest_dark_file = os.path.join(os.path.dirname(__file__), 'forest-dark.tcl')
-forest_light_file = os.path.join(os.path.dirname(__file__), 'forest-light.tcl')
-db_file = os.path.join(os.path.dirname(__file__), 'DB.json')
-image_path = os.path.join(os.path.dirname(__file__), 'images', 'imagen1.png')
+config_file = os.path.join(os.path.dirname(__file__), 'documents/config.json')
+forest_dark_file = os.path.join(os.path.dirname(__file__), 'documents/forest-dark.tcl')
+forest_light_file = os.path.join(os.path.dirname(__file__), 'documents/forest-light.tcl')
+db_file = os.path.join(os.path.dirname(__file__), 'documents/DB.json')
+image_path = os.path.join(os.path.dirname(__file__), 'documents/images/imagen1.png')
 
 
 
-
+#  datas=[('documents/forest-light/*','documents/forest-light/'), ('documents/forest-dark/*','documents/forest-dark/'),('documents/*','documents/'),    ('template.docx','.')],
 
 def theme_mode (interruptor,style):
     if interruptor.instate(["selected"]):
@@ -62,7 +62,7 @@ def menu():
     
     mode_switch = ttk.Checkbutton(widgetFrames,text="Apariencia",style="Switch",command=lambda: theme_mode(mode_switch,theme_style))
     mode_switch.grid(row=2,column=0,padx=20,pady=20,sticky="NEWS")
-    #root.iconphoto(False,tkr.PhotoImage(file=image_path))
+
     root.mainloop()
 
 menu();
