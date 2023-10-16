@@ -6,6 +6,7 @@ from tkcalendar import DateEntry
 from tkinter import scrolledtext, filedialog
 from docCreate import createDocument
 import os
+from openConfig import folioLoad
 config_file = os.path.join(os.path.dirname(__file__), 'config.json')
 forest_dark_file = os.path.join(os.path.dirname(__file__), 'forest-dark.tcl')
 forest_light_file = os.path.join(os.path.dirname(__file__), 'forest-light.tcl')
@@ -109,7 +110,7 @@ def formColoscopia():
     
     
     FolioLabel = ttk.Label(clientInfo,text="Folio:")
-    FolioEntry = ttk.Label(clientInfo,text="1")
+    FolioEntry = ttk.Label(clientInfo,text=f"{folioLoad('folio')} ")
     FolioLabel.grid(row=2, column=3, padx=10);
     FolioEntry.grid(row=3,column=3, padx=10);
     

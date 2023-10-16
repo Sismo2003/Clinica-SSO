@@ -14,7 +14,15 @@ def loadpath(test):
             path = json.load(file);
             return  path.get(f'{test}')
     except:
-        messagebox.showerror(message="Error al cargar la base de datos.",title="Carga de base de datos error")
+        tkr.messagebox.showerror(message="Error al cargar la base de datos.",title="Carga de base de datos error")
+
+def folioLoad(test):
+    try:
+        with open(db_file,"r") as file:
+            path = json.load(file);
+            return  len(path)
+    except:
+        tkr.messagebox.showerror(message="Error al cargar la base de datos.",title="Carga de base de datos error")
 
 
 

@@ -5,6 +5,7 @@ import tkinter as tkr
 import sys,os
 import json
 import time
+from openConfig import folioLoad
 
 def createDocument(
     fullNamestr,pregnanciesstr,clientAgeEntrystr,MedicToEntrystr,dateofExamsEntrystr,birthsEntrystr,abortionEntrystr,
@@ -46,6 +47,7 @@ def createDocument(
             "comtPlanTerapeutico" : comtPlanTerapeuticoEntryst,
             "doctorName" : doctor1NameEntryst ,
             "cedProf" : cedProfEntryst,
+            "id" : folioLoad('id')
         }
     except:
         tkr.messagebox.showwarning(title="Error (xFDoCreate01)",message="Error al crear el documento. (error xFDoCreate01)")

@@ -36,6 +36,10 @@ def menu():
     theme_style.theme_use("forest-dark")
     Frame.pack();
     
+      
+    vers = ttk.Label(Frame,text="Version 1.0 Beta")
+    vers.grid(row=2,column=0,padx=10,pady=10)
+    
     widgetImages = tkr.Frame(Frame)
     widgetImages.grid(row=0,column=0,padx=10,pady=10)
     sosImage = tkr.PhotoImage(file=image_path)
@@ -63,6 +67,7 @@ def menu():
     mode_switch = ttk.Checkbutton(widgetFrames,text="Apariencia",style="Switch",command=lambda: theme_mode(mode_switch,theme_style))
     mode_switch.grid(row=2,column=0,padx=20,pady=20,sticky="NEWS")
 
+    
     root.mainloop()
 
 menu();
