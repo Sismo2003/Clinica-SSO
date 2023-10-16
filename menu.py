@@ -66,8 +66,8 @@ def menu():
     
     mode_switch = ttk.Checkbutton(widgetFrames,text="Apariencia",style="Switch",command=lambda: theme_mode(mode_switch,theme_style))
     mode_switch.grid(row=2,column=0,padx=20,pady=20,sticky="NEWS")
-
     
+   
     root.mainloop()
 
 menu();

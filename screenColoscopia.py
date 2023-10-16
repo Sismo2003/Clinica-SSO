@@ -341,7 +341,7 @@ def formColoscopia():
     saveButton = ttk.Button(frame,text="Guardad",command=submission)
     saveButton.grid(row=0,column=3,padx=10,pady=10,sticky="news")
     
-    menuReturnButton = ttk.Button(frame,text="Menu Principal")
+    menuReturnButton = ttk.Button(frame,text="Menu Principal",command=window.destroy)
     menuReturnButton.grid(row=1,column=3,padx=10,pady=10,sticky="news")
     
     cleanButton = ttk.Button(frame,text="Limpiar Campos")
