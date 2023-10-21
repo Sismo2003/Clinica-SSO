@@ -6,6 +6,7 @@ import sys,os
 import json
 import time
 from openConfig import folioLoad
+import io
 
 def createDocument(
     fullNamestr,pregnanciesstr,clientAgeEntrystr,MedicToEntrystr,dateofExamsEntrystr,birthsEntrystr,abortionEntrystr,
@@ -85,7 +86,7 @@ def createDocument(
                 variable= f"image{rango}"
                 rango +=1
                 pathImages = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), i) 
-                print(pathImages)
+                print(pathImages) 
                 contex[variable]=InlineImage(ColoscopiaTemplateDoc,pathImages, width=Mm(25), height=Mm(20))
         filename = ""
         fullNamestr = fullNamestr.title()
@@ -100,7 +101,7 @@ def createDocument(
     try:
         ColoscopiaTemplateDoc.render(contex)
         FinalDocxPath = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), loadpath('DocxSaveDocument'))
-        output =os.path.join(FinalDocxPath, f"{filename}ReporteColposcopico.docx")
+        output = os.path.join(FinalDocxPath, f"{filename}ReporteColposcopico.docx")
         ColoscopiaTemplateDoc.save(output)
         DBpath =os.path.join(os.path.dirname(__file__), loadpath('DatabasePath'))
         with open(f"{DBpath}","r") as file:
